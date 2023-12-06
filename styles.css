@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
+
+* {
+    /* background-color:aquamarine; */
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+h1 {
+    /* font-size: calc(20px + 18vh);
+    line-height: calc(20px + 20vh); */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: black;
+    text-align: center;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+}
+
+@-webkit-keyframes blink {
+
+    20%,
+    24%,
+    55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    60%,
+    70%,
+    80%,
+    90%,
+    100% {
+        text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+        color: #fff6a9;
+    }
+}
+
+@keyframes blink {
+
+    20%,
+    24%,
+    55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+        color: #fff6a9;
+    }
+}
+
+.container {
+    display: flex;
+    width: 80vw;
+    margin-bottom: 0px;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.8s ease-in-out;
+    border: 2px solid #ffa500;
+}
+
+.panel h3 {
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+    background: none;
+    opacity: 0;
+    font-family: Dhurjati;
+    font-size: 30px;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width:480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+.im-1 {
+    background-image: url(resources/temple.jpg);
+}
+
+.im-2 {
+    background-image: url(resources/river.jpg);
+}
+
+.im-3 {
+    background-image: url(resources/beach.jpg);
+}
+
+.im-4 {
+    background-image: url(resources/building.jpg);
+}
+
+.im-5 {
+    background-image: url(resources/mountain.jpg);
+}
+
+.im-6 {
+    background-image: url(resources/build.png);
+}
